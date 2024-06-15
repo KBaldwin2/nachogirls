@@ -1,17 +1,20 @@
 import { Button } from "../ui/button";
 import { LargeTitle } from "../ui/title-lg";
-import { Playfair_Display, Pacifico, Lobster } from "next/font/google";
+import {  Sriracha} from "next/font/google";
 
-const playfairDisplay = Pacifico({ subsets: ["latin"], weight: "400" });
+const playfairDisplay = Sriracha({weight:'400', subsets:['latin']});
 
 export default function HomePage() {
   return (
-    <div className="my-12 mx-20 flex">
-      <div>
+    <div className="grid grid-cols-4 mx-10">
+      <div className="col-span-3">
         <LargeTitle className={`text-white ${playfairDisplay.className}`}>
           BEING A WOMAN IS AWESOME. WE PROTECT YOU WHEN IT'S NOT.
         </LargeTitle>
-        <Button>Calculate Your Premium</Button>
+        <div className="text-white text-2xl">
+          Paragraph about things. Curious about cost? Calculate your premium below.
+        </div>
+        <Button className="text-xl">Calculate Your Premium</Button>
       </div>
     </div>
   );
