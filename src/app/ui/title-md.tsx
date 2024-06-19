@@ -1,13 +1,15 @@
+import { ReactNode } from "react";
+
 export function MediumTitle({
-  title,
   className,
+  children
 }: {
-  title: string;
   className?: string;
+  children: ReactNode
 }) {
   return (
-    <h2 className={`text-xl md:text-2xl font-bold tracking-tight leading-tight ${className}`}>
-    {title}
-  </h2>
+    <h3 className={`font-bold text-6xl ${className}`}>
+      {children}
+    </h3>
   );
 }

@@ -13,6 +13,9 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        tan: ["var(--font-tan)"]
+      },
       colors: {
         primary: "#e69e7f",
         secondary: "#faf3eb",
@@ -30,8 +33,8 @@ const config: Config = {
         "5xl": "2.5rem",
         "6xl": "2.75rem",
         "7xl": "4.5rem",
-        "8xl": "6.25rem",
-        "9xl":"9.5rem"
+        "8xl": "7rem",
+        "9xl":"10rem"
       },
       boxShadow: {
         sm: "0 5px 10px rgba(0, 0, 0, 0.12)",

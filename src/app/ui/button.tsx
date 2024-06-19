@@ -1,21 +1,33 @@
-import { ReactNode } from "react";
+"use client"
+import {
+  Button as RACButton,
+  type ButtonProps as RACButtonProps,
+} from "react-aria-components";
+import { LoadingSpinner } from "./loading-spinner/loading-spinner";
 
-type ButtonProps = {
-  onClick?: () => void;
-  className?: string;
-  children: ReactNode;
-  variant?: 'primary' | 'secondary' | 'noBackground';
-};
+interface ButtonProps extends RACButtonProps {
+  isLoading?: boolean;
+  variant?: "primary" | "secondary" | "noBackground";
+}
 
-export function Button({ onClick, className, children, variant="primary" }: ButtonProps) {
-    const variantClasses: Record<string, string> = {
-        primary: 'bg-primary text-black hover:bg-secondary p-4 px-6',
-        secondary: 'bg-gray-300 text-black hover:bg-gray-700 p-4 px-6',
-        noBackground: 'text-green font-bold hover:underline'
-    };
+export function Button({
+  children,
+  isLoading,
+  variant = "primary",
+  ...props
+}: ButtonProps) {
+  const variantClasses: Record<string, string> = {
+    primary: "bg-primary text-black hover:bg-secondary p-4 px-6",
+    secondary: "bg-black text-primary hover:bg-gray-700 p-4 px-6",
+    noBackground: "text-green font-bold hover:underline",
+  };
   return (
-    <button className={`${className} ${variantClasses[variant]}`} onClick={onClick}>
-      {children}
-    </button>
+    <RACButton
+      {...props}
+      isDisabled={isLoading ?? props.isDisabled}
+      className={`${props.className} ${variantClasses[variant]}`}
+    >
+      {isLoading ? <LoadingSpinner /> : children}
+    </RACButton>
   );
 }
