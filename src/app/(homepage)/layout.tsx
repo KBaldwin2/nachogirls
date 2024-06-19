@@ -7,9 +7,10 @@ import Link from "next/link";
 import { cn } from "../ui/utils/cn";
 
 const navigation = [
-  { name: "How It Works", href: "/" },
-  { name: "Contact", href: "/contact" },
   { name: "Launching Soon", href: "/coming-soon" },
+
+  { name: "Contact", href: "/contact" },
+  { name: "How It Works", href: "/" },
 ];
 
 export default function HomeLayout({

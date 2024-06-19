@@ -5,6 +5,7 @@ export default function HomePage() {
   return (
     <div className="grid grid-cols-6 mx-10">
       <div className="col-span-4">
+        <div>Page under construction</div>
         <LargeTitle className={`text-white text-8xl font-tan`}>
           BEING A WOMAN IS AWESOME. WE PROTECT YOU WHEN IT'S NOT.
         </LargeTitle>
