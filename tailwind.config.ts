@@ -2,6 +2,7 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
+     './src/**/*.{js,jsx,ts,tsx}',
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -31,10 +32,10 @@ const config: Config = {
       fontSize: {
         "4xl": "2rem",
         "5xl": "2.5rem",
-        "6xl": "2.75rem",
+        "6xl": "3rem",
         "7xl": "4.5rem",
         "8xl": "7rem",
-        "9xl":"10rem"
+        "9xl":"8rem"
       },
       boxShadow: {
         sm: "0 5px 10px rgba(0, 0, 0, 0.12)",

@@ -1,19 +1,27 @@
-import { Button } from "../ui/button";
-import { LargeTitle } from "../ui/title-lg";
+"use client";
+import { routes } from "../routes";
+import { Button } from "../../ui/button";
+import Container from "../../ui/layout/Container";
+import { LargeTitle } from "../../ui/title-lg";
+import { useRouter } from "next/navigation";
 
 export default function HomePage() {
+  const router = useRouter();
   return (
-    <div className="grid grid-cols-6 mx-10">
-      <div className="col-span-4">
-        <div>Page under construction</div>
-        <LargeTitle className={`text-white text-8xl font-tan`}>
-          BEING A WOMAN IS AWESOME. WE PROTECT YOU WHEN IT'S NOT.
-        </LargeTitle>
-        <div className="text-white text-2xl">
-          Paragraph about things. Curious about cost? Calculate your premium below.
+    <Container>
+      <div className="grid grid-cols-6">
+        <div className="col-span-6 lg:col-span-4">
+          <LargeTitle className={`text-white font-tan`}>
+            BEING A WOMAN IS AWESOME. WE PROTECT YOU WHEN IT'S NOT.
+          </LargeTitle>
+          <Button
+            className="text-xs md:text-2xl"
+            onPress={() => router.push(routes.calculatePremium())}
+          >
+            Calculate Your Premium
+          </Button>
         </div>
-        <Button className="text-xl">Calculate Your Premium</Button>
       </div>
-    </div>
+    </Container>
   );
 }
