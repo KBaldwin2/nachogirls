@@ -8,7 +8,7 @@ export function MediumTitle({
   children: ReactNode
 }) {
   return (
-    <h3 className={`font-bold text-6xl ${className}`}>
+    <h3 className={`font-bold text-xl md:text-6xl ${className}`}>
       {children}
     </h3>
   );

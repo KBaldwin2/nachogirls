@@ -17,7 +17,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   const variantClasses: Record<string, string> = {
-    primary: "bg-primary text-black hover:bg-secondary p-4 px-6",
+    primary: "bg-primary text-white hover:bg-secondary p-4 px-6",
     secondary: "bg-black text-primary hover:bg-gray-700 p-4 px-6",
     noBackground: "text-green font-bold hover:underline",
   };
