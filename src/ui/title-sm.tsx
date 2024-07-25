@@ -1,13 +1,15 @@
+import { ReactNode } from "react";
+
 export function SmallTitle({
-  title,
+  children,
   className,
 }: {
-  title: string;
+  children: ReactNode
   className?: string;
 }) {
   return (
     <h3 className={`font-bold tracking-tight leading-tight ${className}`}>
-      {title}
+      {children}
     </h3>
   );
 }

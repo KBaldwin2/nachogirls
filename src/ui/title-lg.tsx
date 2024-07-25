@@ -8,7 +8,7 @@ export function LargeTitle({
   children: ReactNode
 }) {
   return (
-    <h3 className={`font-bold  md:text-8xl ${className}`}>
+    <h3 className={`font-bold md:text-8xl ${className}`}>
       {children}
     </h3>
   );

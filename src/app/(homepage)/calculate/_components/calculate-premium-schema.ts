@@ -3,8 +3,8 @@ import { z } from "zod";
 export const calculatePremiumSchema = z.object({
   age: z.string(),
   employmentType: z.string(),
-  salaryRange: z.string(),
-  location: z.string(),
+  salary: z.string(),
+  province: z.string(),
   industry: z.string(),
 });
 

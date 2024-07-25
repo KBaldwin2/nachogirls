@@ -35,6 +35,8 @@ export const Form = <TSchema extends ZodTypeAny>({
           schema,
         });
 
+        console.log(result)
+
         if (result.status !== "success") {
           setFormError(result.error);
           return;
