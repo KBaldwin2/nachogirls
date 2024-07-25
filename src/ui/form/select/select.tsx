@@ -98,7 +98,7 @@ export function Select<T extends object>({
         )}
       >
         {props.leftIcon && <props.leftIcon className="h-4 w-4 text-primary" />}
-        <SelectValue className="flex-1 text-sm placeholder-shown:italic text-primary" />
+        <SelectValue className="flex-1 text-sm placeholder-shown:italic text-primary group-disabled:text-gray-400" />
         {chevron && (
           <ChevronDown
             aria-hidden

@@ -13,13 +13,21 @@ export const AGERANGES = [
   { key: 26, name: "26 - 35" },
   { key: 36, name: "36 - 45" },
   { key: 46, name: "46 - 55" },
+  { key: 56, name: "56 - 65" },
 ];
 
 const generateSalaryRanges = (ranges: number[][]) => {
-  return ranges.map((range, index) => ({
-    key: index,
-    name: `$${range[0].toLocaleString()} - $${range[1].toLocaleString()}`,
-  }));
+  const min = ranges[0][0];
+  const max = ranges[ranges.length - 1][1];
+  
+  return [
+    { key: 'min', name: `< $${min.toLocaleString()}` },
+    ...ranges.map((range, index) => ({
+      key: index,
+      name: `$${range[0].toLocaleString()} - $${range[1].toLocaleString()}`,
+    })),
+    { key: 'max', name: `$${max.toLocaleString()}+` }
+  ];
 };
 
 export const SALARYRANGES = [
@@ -63,7 +71,18 @@ export const SALARYRANGES = [
       [215319.04, 338808.68],
     ]),
   },
+  {
+    age: 56,
+    salary: generateSalaryRanges([
+      [31360, 49346],
+      [49346, 77646],
+      [77646, 122178],
+      [122178, 192249],
+      [192249, 302508],
+    ]),
+  },
 ];
+
 
 export const EMPLOYMENTTYPE = [
   { key: "Full Time Permanent", name: "Full Time Permanent" },

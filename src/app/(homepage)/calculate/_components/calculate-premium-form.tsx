@@ -91,6 +91,7 @@ export function CalculatePremiumForm() {
             label="Salary"
             id="salary"
             name="salary"
+            placeholder={!age ? "Please select age to enable salary ranges": "Select an item"}
             items={SALARYRANGES.find((x) => x.age === age)?.salary}
             isDisabled={!age}
           >
